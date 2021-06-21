@@ -188,7 +188,7 @@ export default {
                     padding: 7px 10px;
                     border-radius: 12px;
                     background-color: #7ABC64;
-                    margin: 10px 0;
+                    margin: 20px 0;
                     &:hover {
                         transform: scale(0.8)
                     }
