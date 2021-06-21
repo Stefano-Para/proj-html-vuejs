@@ -100,7 +100,7 @@ export default {
         window.addEventListener("scroll", function(){
           var navbar = document.getElementById("navbar")
           var nav_classes = navbar.classList
-          if(document.documentElement.scrollTop >= 10) {
+          if(document.documentElement.scrollTop >= 5) {
             if (nav_classes.contains("shrink") === false) {
               nav_classes.toggle("shrink");
             }
