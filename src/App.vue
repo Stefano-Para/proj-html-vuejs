@@ -31,4 +31,8 @@ export default {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
+.container-dimension {
+    width: 60%;
+    margin: 0 auto;
+}
 </style>

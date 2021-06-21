@@ -23,6 +23,7 @@
                     <p>We offer the finest driving tuition money can buy</p>
               </div>
           </div>
+          <!-- navbar  -->
           <div id="navbar">
               <div class="container-dimension">
                     <a href="">
@@ -68,9 +69,10 @@ export default {
                     status: 'inactive'
                 },
                 {
-                    link: 'courses',
+                    link: 'courses',            
                     status: 'inactive',
-                    class: 'new'
+                    class: 'new',
+                    
                 },
                 {
                     link: 'location',
@@ -92,16 +94,30 @@ export default {
         setActive: function(clicked) {
             this.active_index = clicked;
         }
-    }
+    },
+    mounted() {
+      this.$nextTick(function(){
+        window.addEventListener("scroll", function(){
+          var navbar = document.getElementById("navbar")
+          var nav_classes = navbar.classList
+          if(document.documentElement.scrollTop >= 10) {
+            if (nav_classes.contains("shrink") === false) {
+              nav_classes.toggle("shrink");
+            }
+          }
+          else {
+            if (nav_classes.contains("shrink") === true) {
+              nav_classes.toggle("shrink");
+            }
+          }
+        })
+      })
+    },
 }
 </script>
 
 <style lang="scss" scoped>
 
-.container-dimension {
-    width: 60%;
-    margin: 0 auto;
-}
 header {
     margin: 0 auto;
     #top-header {
@@ -152,6 +168,11 @@ header {
             position: fixed;
             top: 40px;
             background-color: rgba(90, 4, 4, 0.3);
+            transition: all 0.2s;
+            &.shrink {
+                top: 0;
+                background-color: rgba(90, 4, 4, 0.6);
+                }
             .container-dimension {
                 display: flex;
                 align-items: center;
