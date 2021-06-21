@@ -25,7 +25,9 @@
           </div>
           <div id="navbar">
               <div class="container-dimension">
-                    <img src="../assets/avada-drivers-logo-1x.png" alt="">
+                    <a href="">
+                        <img src="../assets/avada-drivers-logo-1x.png" alt="">
+                    </a>
                     <ul >
                         <li v-for="(item, i) in navbar"
                         :key="i"
@@ -155,9 +157,14 @@ header {
                 align-items: center;
                 justify-content: space-between;
                 height: 100%;
-                img {
+                a {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    img {
                     height: 40%;
                 }
+            }
                 ul {
                     display: flex;
                     align-items: center;
