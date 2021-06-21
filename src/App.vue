@@ -22,6 +22,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 * {
   box-sizing: border-box;
   margin: 0;
