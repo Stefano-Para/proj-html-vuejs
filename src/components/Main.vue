@@ -1,0 +1,195 @@
+<template>
+    <main>
+        <!-- section 1/5 registration white -->
+        <section id="sign-up" >
+        <div class="container-dimension">
+            <div class="column-50">
+                <h2>Get Behing The Wheel</h2>
+                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quaerat iure quidem ex ratione adipisci dignissimos deserunt placeat.
+                </h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit distinctio amet, quia veniam ad vitae molestiae aperiam! Tempora, rerum cumque. Enim atque, sunt tempore mollitia ab dolorum! Architecto, nam suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, amet! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, molestiae.</p>
+            </div>
+            <div class="column-50 column-absolute">
+
+                    <div id="text-absolute">
+                        <h2>First Lesson Free</h2>
+                        <h4>When you make a block booking with us your first lesson is included free.</h4>
+                    </div>
+
+                    <form id="registration" action="/action_page.php">
+                        <input type="text" name="name" placeholder="Your Name*">
+                        
+                        <input type="email" name="email" placeholder="Email*">
+
+                        <input type="number" placeholder="Telephone">
+
+                        <input type="text" name="location" placeholder="Location">
+                    </form>
+                    <button>Request a Callback</button>
+
+            </div>
+        </div>
+        </section>
+        <!-- section 2/5 drive today + phone  -->
+        <section id="drive-today">
+            <div class="container-dimension">
+                <div class="column-50">
+                    <h2>Start Learning to Drive Today</h2>
+                    <h5>Give us a call to schedule your first driving lesson</h5>
+                </div>
+                <div class="column-50">
+                    <h4>
+                        <i class="fas fa-phone"></i>
+                        1-800-555-555
+                    </h4>
+                </div>
+            </div>
+        </section>
+        <!-- section 3/5 instructor sect  -->
+        <section id="courses">
+
+        </section>
+
+  </main>
+</template>
+
+<script>
+export default {
+    name: 'Main'
+}
+</script>
+
+<style lang="scss" scoped>
+#sign-up {
+    background-color: white;
+    height: 480px;
+    color: #494c4e;
+    .container-dimension {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0 20px;
+        position: relative;
+        // column left 
+        .column-50 {
+            width: 48%;
+            padding: 20px 0;
+            h2 {
+                font-weight: 600;
+            }
+            h4 {
+                font-weight: 400;
+                margin: 20px 0;
+                line-height: 1.6em;
+                letter-spacing: 0.5px;
+            }
+            p {
+                font-size: 12px;
+                letter-spacing: 1px;
+                line-height: 1.8em;
+                font-weight: 300;
+            }
+        }
+        // column right
+        .column-absolute {
+            box-shadow: 0px 3px 10px 3px rgba($color: #000000, $alpha: 0.1);
+            background-color: white;
+            border-radius: 7px;
+            width: 45%;
+            position: absolute;
+            top: -25px;
+            right: 0;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            #text-absolute {
+                text-align: center;
+                h2 {
+                    color: #7ABC64;
+                }
+                h4 {
+                    font-weight: 300;
+                    font-size: 12px;
+                    margin: 20px 0;
+                    line-height: 1.5em;
+                    letter-spacing: 0.5px;
+                    color: #494c4e;
+                }
+            }
+            #registration {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: stretch;
+                padding: 10px;
+                color: #494c4e;
+                input {
+                    font-size: 12px;
+                    border-radius: 3px;
+                    border: 1px solid #494c4e;
+                    background-color: rgba(223, 217, 217, 0.301);
+                    margin: 10px 0;
+                    height: 40px;
+                    padding: 0px 10px;
+                }
+            }
+            button {
+                text-transform: uppercase;
+                font-size: 12px;
+                color: white;
+                width: 50%;
+                margin: 10px auto;
+                background-color: #7ABC64;
+                padding: 7px 20px;
+                border: white;
+                border-radius: 12px;
+                &:hover {
+                    transform: scale(0.9)
+                }
+            }
+        }
+    }
+}
+#drive-today {
+    height: 190px;
+    background-image: url(../assets/horizontal-cta-background.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    .container-dimension {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90%;
+        padding: 15px 0;
+        .column-50 {
+            width: 48%;
+            padding: 20px 0;
+            h2 {
+                font-size: 35px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            h5 {
+                font-size: 18px;
+                font-weight: 500;
+            }
+            h4 {
+                height: 25px;
+                transform: scale(1.6);
+                font-weight: 400;
+                text-align: center;
+                i {
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
+#courses {
+    height: 450px;
+    background-image: url(../assets/promise-background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+</style>

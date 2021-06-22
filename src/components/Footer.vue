@@ -55,10 +55,10 @@
                     © Copyright 2021 - 2020 | Avada Theme by <span>ThemeFusion</span> | All right Reserved | Powered by <span>WordPress</span>
                 </h6>
                 <ul>
-                    <li v-for="item in socials"
-                    :key="item">
-                        <a href="">
-                            <i :class="item.icon"></i>
+                    <li v-for="(item, i) in socials"
+                    :key="i">
+                        <a :href="item.url">
+                            <i :class="item.socialIcon"></i>
                         </a>
                     </li>
                 </ul>
@@ -108,19 +108,23 @@ export default {
             socials: [
                 {
                     name:'facebook',
-                    icon: 'fab fa-facebook-f'
+                    socialIcon: 'fab fa-facebook-f',
+                    url: 'https://www.facebook.com/groups/AvadaUsers/'
                 },
                 {
                     name:'twitter',
-                    icon: 'fab fa-twitter'
+                    socialIcon: 'fab fa-twitter',
+                    url: 'https://twitter.com/theme_fusion'
                 },
                 {
                     name:'youtube',
-                    icon: 'fab fa-youtube'
+                    socialIcon: 'fab fa-youtube',
+                    url: 'https://www.youtube.com/results?search_query=avada'
                 },
                 {
                     name:'instagram',
-                    icon: 'fab fa-instagram'
+                    socialIcon: 'fab fa-instagram',
+                    url: 'https://www.instagram.com/themefusion/'
                 }
             ]
         }

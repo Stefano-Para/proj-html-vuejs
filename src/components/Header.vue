@@ -169,6 +169,7 @@ header {
             top: 40px;
             background-color: rgba(90, 4, 4, 0.3);
             transition: all 0.2s;
+            z-index: 2;
             &.shrink {
                 top: 0;
                 background-color: rgba(90, 4, 4, 0.6);
