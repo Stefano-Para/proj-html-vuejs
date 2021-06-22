@@ -134,11 +134,11 @@ export default {
 
 <style lang="scss" scoped>
 #footer-top {
-    height: 300px;
     background-image: url(../assets/footer-background-color.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
     .container-dimension {
             display: flex;
             justify-content: space-between;

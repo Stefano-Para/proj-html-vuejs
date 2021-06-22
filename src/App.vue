@@ -38,4 +38,7 @@ export default {
     width: 60%;
     margin: 0 auto;
 }
+button:hover {
+  cursor: pointer;
+}
 </style>

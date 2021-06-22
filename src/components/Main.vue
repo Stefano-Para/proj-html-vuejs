@@ -17,7 +17,10 @@
                     </div>
 
                     <form id="registration" action="/action_page.php">
-                        <input type="text" name="name" placeholder="Your Name*">
+                        <div id="container-input-img">
+                            <input type="text" name="name" placeholder="Your Name*">
+                            <a href=""><img src="../assets/image.png" alt=""></a>  
+                        </div>
                         
                         <input type="email" name="email" placeholder="Email*">
 
@@ -82,8 +85,7 @@
                 </div>
 
             </section>
-
-            <!-- second part of the section with istructors  -->
+            <!-- second part with istructors  -->
             <section>
                 <div class="container-dimension container-circles3">
                     <div class="background-green">
@@ -97,13 +99,33 @@
                     </div>
                     <div class="background-green">
                         <div class="container-circle">
-                            referral rate
+                            <i class="far fa-circle fa-9x"></i>
+                            <div class="white-circle">
+                                <h2>100%</h2>
+                            </div>
+                                <h5>Pass Rate</h5>
                         </div>
                     </div>
                     <div class="background-green">
                         <div class="container-circle">
-                            accidental rate
+                            <div class="grey-circle">
+                                
+                            </div>
+                            <div class="white-circle">
+                                <h2>95%</h2>
+                            </div>
+                                <h5>Pass Rate</h5>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <!-- thir part "your istructors" -->
+            <section id="container-your-istructors">
+                <div class="container-dimension">
+                    <h2>Your Istructors</h2>
+                    <div id="textNDbutton">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nostrum. Doloremque sint id eius accusamus esse. Facilis obcaecati omnis..</p>
+                        <button>More about us</button>
                     </div>
                 </div>
             </section>
@@ -182,6 +204,19 @@ export default {
                 align-items: stretch;
                 padding: 10px;
                 color: #494c4e;
+                #container-input-img {
+                    position: relative;
+                    input {
+                        width: 100%;
+                    }
+                    img {
+                        width: 15px;
+                        height: 17px;
+                        position: absolute;
+                        top: 22px;
+                        right: 10px;
+                    }
+                }
                 input {
                     font-size: 12px;
                     border-radius: 3px;
@@ -248,7 +283,7 @@ export default {
 }
 // THIRD SECTION 
 #instructorsNDcourses {
-    height: 900px;
+    // height: 900px;
     #courses-container {
         position: relative;
         height: 450px;
@@ -358,6 +393,7 @@ export default {
                 i {
                     font-size: 220px;
                     color: #7ABC64;
+                    transform: rotate(-10deg)
                 }
                 h5 {
                     width: 100%;
@@ -365,20 +401,58 @@ export default {
                     margin: 10px auto 0;
                     font-weight: 500;
                 }
+                .grey-circle {
+                    position: relative;
+                    z-index: 1;
+                    height: 215px;
+                    width: 215px;
+                    border-radius: 50%;
+                    background-color: #eeeeee;
+                }
                 .white-circle {
                     position: absolute;
                     background-color: white;
-                    bottom: 96px;
-                    height: 195px;
-                    width: 195px;
+                    z-index: 1;
+                    bottom: 97px;
+                    height: 192px;
+                    width: 192px;
                     border-radius: 50%;
                     h2 {
                         font-size: 40px;
                         position: absolute;
+                        z-index: 1;
                         top: 50%;
                         left: 50%;
                         transform: translate(-45%, -50%);
                     }
+                }
+            }
+        }
+    }
+    #container-your-istructors {
+        margin: 300px 0;
+        #textNDbutton {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin: 20px 0;
+            p {
+                margin-top: 10px;
+                width: 60%;
+                letter-spacing: 0.5px;
+                // line-height: 25px;
+                color: #7799ad;
+            }
+            button {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: white;
+                padding: 10px 70px;
+                background-color: #7ABC64;
+                border-radius: 20px;
+                border: 0;
+                &:hover {
+                    transform: scale(0.8);
                 }
             }
         }
