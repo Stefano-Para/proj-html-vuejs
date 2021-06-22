@@ -357,6 +357,7 @@ export default {
                 position: relative;
                 i {
                     font-size: 220px;
+                    color: #7ABC64;
                 }
                 h5 {
                     width: 100%;
@@ -367,16 +368,16 @@ export default {
                 .white-circle {
                     position: absolute;
                     background-color: white;
-                    bottom: 95px;
-                    height: 198px;
-                    width: 198px;
+                    bottom: 96px;
+                    height: 195px;
+                    width: 195px;
                     border-radius: 50%;
                     h2 {
-                        font-size: 30px;
+                        font-size: 40px;
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%, -50%);
+                        transform: translate(-45%, -50%);
                     }
                 }
             }
