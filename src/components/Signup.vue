@@ -1,47 +1,45 @@
 <template>
-    <main>
-        
-        <Signup />
+    <section id="sign-up" >
+        <div class="container-dimension">
+            <div class="column-50">
+                <h2>Get Behing The Wheel</h2>
+                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quaerat iure quidem ex ratione adipisci dignissimos deserunt placeat.
+                </h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit distinctio amet, quia veniam ad vitae molestiae aperiam! Tempora, rerum cumque. Enim atque, sunt tempore mollitia ab dolorum! Architecto, nam suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, amet! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, molestiae.</p>
+            </div>
+            <div class="column-50 column-absolute">
 
-        <Drivetoday />
+                    <div id="text-absolute">
+                        <h2>First Lesson Free</h2>
+                        <h4>When you make a block booking with us your first lesson is included free.</h4>
+                    </div>
 
-        <Courses />
+                    <form id="registration" action="/action_page.php">
+                        <div id="container-input-img">
+                            <input type="text" name="name" placeholder="Your Name*">
+                            <a href=""><img src="../assets/image.png" alt=""></a>  
+                        </div>
+                        
+                        <input type="email" name="email" placeholder="Email*">
 
-        <Graphs />
+                        <input type="number" placeholder="Telephone">
 
-        <Istructors :istructors="istructors"/>
-        
-        <Slider />
+                        <input type="text" name="location" placeholder="Location">
+                    </form>
+                    <button>Request a Callback</button>
 
-  </main>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>
-import Slider from './Slider.vue'
-import Istructors from './Istructors.vue'
-import Graphs from './Graphs.vue'
-import Courses from './Courses.vue'
-import Drivetoday from './Drivetoday.vue'
-import Signup from './Signup.vue'
-
 export default {
-    name: 'Main',
-    components: {
-        Slider,
-        Istructors,
-        Graphs,
-        Courses,
-        Drivetoday,
-        Signup
-    },
-    props: {
-        istructors: Array
-    }
+    name: 'Signup'
 }
 </script>
 
 <style lang="scss" scoped>
-// FIRST SECTION 
 #sign-up {
     background-color: white;
     height: 480px;

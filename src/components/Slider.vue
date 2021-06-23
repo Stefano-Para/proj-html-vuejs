@@ -1,21 +1,10 @@
 <template>
     <section id="testimonials">
-        
-        <!-- <div class="container-dimension">
-            <h2>Testimonials</h2>
-            <p>Here's what our happy drivers had to say about our services:</p>
-            <div class="dinamic-testimonials">
-                <img src="../assets/testimonial-sophia.png" alt="">
-                <p>Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Hightly reccomended.</p>
-                <h5>Sophia Jones</h5>
-            </div>
-        </div> -->
-
         <div
-        
          class="container-dimension">
             <h2>Testimonials</h2>
             <p>Here's what our happy drivers had to say about our services:</p>
+            
             <!-- dinamic slider  -->
             <div class="dinamic-testimonials">
                 <img
@@ -36,8 +25,8 @@
                     ></i>
                 </div>
             </div>
+
         </div>
-    
     </section>
 </template>
 
@@ -129,6 +118,12 @@ export default {
             .fixed-dots {
                 position: absolute;
                 bottom: -80px;
+                i {
+                    margin: 1px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }

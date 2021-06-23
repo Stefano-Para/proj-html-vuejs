@@ -1,6 +1,7 @@
 <template>
     <section id="circle-graphs">
         <div class="container-dimension container-circles3">
+            <!-- first graph  -->
             <div class="background-green">
                 <div class="container-circle">
                     <i class="fas fa-circle-notch fa-9x"></i>
@@ -11,6 +12,7 @@
                         <h5>Pass Rate</h5>
                 </div>
             </div>
+            <!-- second graph  -->
             <div class="background-green">
                 <div class="container-circle">
                     <i class="far fa-circle fa-9x"></i>
@@ -20,6 +22,7 @@
                         <h5>Pass Rate</h5>
                 </div>
             </div>
+            <!-- third graph  -->
             <div class="background-green">
                 <div class="container-circle">
                     <div class="grey-circle">
