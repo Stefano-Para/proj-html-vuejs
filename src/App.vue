@@ -3,7 +3,7 @@
 
     <Header />
 
-    <Main />
+    <Main :istructors="istructors" />
 
     <Footer />
 
@@ -21,6 +21,27 @@ export default {
     Header,
     Footer,
     Main
+  },
+  data: function() {
+    return {
+      istructors: [
+        {
+          name: 'Mike Hart',
+          img: 'instructor-mikehart-400x254.jpg',
+          text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
+        },
+        {
+          name: 'John Smith',
+          img: 'instructor-johnsmith-400x254.jpg',
+          text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
+        },
+        {
+          name: 'Angela Hart',
+          img: 'instructor-angelahart-400x254.jpg',
+          text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
+        },
+      ]
+    }
   }
 }
 </script>

@@ -181,6 +181,9 @@ export default {
                             color: #7ABC64;
                             text-decoration: none;
                             font-size: 12px;
+                            &:hover {
+                                opacity: 0.8;
+                            }
                         }
 
                     }
@@ -231,6 +234,9 @@ export default {
                     text-decoration: none;
                     color: white;
                     margin: 0 10px;
+                    &:hover {
+                        opacity: 0.5;
+                    }
                 }
             }
         }

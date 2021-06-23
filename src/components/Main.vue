@@ -132,17 +132,37 @@
                 <!-- import data from app building 3 cards  -->
                 <div id="container-istructors-cards">
                     <div class="container-dimension">
-                        <div class="container-single-card">
-                            1
-                        </div>
-                        <div class="container-single-card">
-                            2
-                        </div>
-                        <div class="container-single-card">
-                            3
+                        <div v-for="(istructor, index) in istructors"
+                        :key="index"
+                        class="container-single-card">
+                            <img :src="require(`../assets/${istructor.img}`)" alt="">
+                            <h3>{{ istructor.name }}</h3>
+                            <ul>
+                                <li>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
+            </section>
+            <!-- forth part with Testimonials bg-->
+            <section id="testimonials">
+                <!-- container all testimonials  -->
+                <div class="container-dimension">
+                    <h2>Testimonials</h2>
+                    <p>Here's what our happy drivers had to say about our services:</p>
+                    <!-- dinamic slider  -->
+                    <div class="dinamic-testimonials">
+                        <img src="../assets/testimonial-sophia.png" alt="">
+                        <p>Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Hightly reccomended.</p>
+                        <h5>Sophia Jones</h5>
+                    </div>
+                </div>
+
             </section>
         </section>
 
@@ -151,7 +171,13 @@
 
 <script>
 export default {
-    name: 'Main'
+    name: 'Main',
+    props: {
+        istructors: Array
+    },
+    methos: function() {
+
+    }
 }
 </script>
 
@@ -484,8 +510,7 @@ export default {
             }
         }
         #container-istructors-cards {
-            // cancellare altezza 
-            height: 500px;
+            height: 370px;
             .container-dimension {
                 display: flex;
                 justify-content: space-between;
@@ -496,15 +521,77 @@ export default {
                         0px 16px 15px 5px rgb(0 0 0 / 10%),
                         0px -6px #7ABC64;
                     background-color: white;
+                    color: #bebdbd;
                     border-radius: 10px;
                     height: 400px;
-                    width: 35%;
+                    width: 34%;
+                    padding: 15px;
                     &:first-child,
                     &:last-child {
                         width: 32%;
                         height: 390px;
                     }
+                    img {
+                        width: 250px;
+                    }
+                    h3 {
+                        color: #494c4e;
+                        margin: 20px 0 10px;
+                        font-size: 25px;
+                        font-weight: 600;
+                    }
+                    ul {
+                        list-style-type: none;
+                        a {
+                            margin: 10px;
+                            text-decoration: none;
+                            color: #bebdbd;;
+                        }
+                    }
+                    p {
+                        font-size: 14px;
+                        padding: 0px 15px;
+                        letter-spacing: 0.5px;
+                        line-height: 25px;
+                    }
                 }
+            }
+        }
+    }
+}
+#testimonials {
+    background-image: url('../assets/testimonial-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    .container-dimension {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #95a5b2;
+        h2 {
+            color: #494c4e;
+            font-weight: 600;
+            font-size: 30px;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .dinamic-testimonials {
+            text-align: center;
+            img {
+                width: 15%;
+                margin: 40px;
+            }
+            p {
+                font-size: 16px;
+                width: 50%;
+                margin: 0 auto;
+                line-height: 25px;
+                font-weight: 400;
             }
         }
     }
