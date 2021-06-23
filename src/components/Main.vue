@@ -149,34 +149,24 @@
                     </div>
                 </div>
             </section>
-            <!-- forth part with Testimonials bg-->
-            <section id="testimonials">
-                <!-- container all testimonials  -->
-                <div class="container-dimension">
-                    <h2>Testimonials</h2>
-                    <p>Here's what our happy drivers had to say about our services:</p>
-                    <!-- dinamic slider  -->
-                    <div class="dinamic-testimonials">
-                        <img src="../assets/testimonial-sophia.png" alt="">
-                        <p>Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Hightly reccomended.</p>
-                        <h5>Sophia Jones</h5>
-                    </div>
-                </div>
 
-            </section>
+            <Slider />
+            
         </section>
 
   </main>
 </template>
 
 <script>
+import Slider from './Slider.vue'
+
 export default {
     name: 'Main',
+    components: {
+        Slider
+    },
     props: {
         istructors: Array
-    },
-    methos: function() {
-
     }
 }
 </script>
@@ -559,42 +549,42 @@ export default {
         }
     }
 }
-#testimonials {
-    background-image: url('../assets/testimonial-background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 700px;
-    .container-dimension {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #95a5b2;
-        h2 {
-            color: #494c4e;
-            font-weight: 600;
-            font-size: 30px;
-        }
-        p {
-            font-size: 18px;
-            font-weight: 400;
-        }
-        .dinamic-testimonials {
-            text-align: center;
-            img {
-                width: 15%;
-                margin: 40px;
-            }
-            p {
-                font-size: 16px;
-                width: 50%;
-                margin: 0 auto;
-                line-height: 25px;
-                font-weight: 400;
-            }
-        }
-    }
-}
+// #testimonials {
+//     background-image: url('../assets/testimonial-background.jpg');
+//     background-size: cover;
+//     background-position: center;
+//     height: 700px;
+//     .container-dimension {
+//         height: 100%;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         color: #95a5b2;
+//         h2 {
+//             color: #494c4e;
+//             font-weight: 600;
+//             font-size: 30px;
+//         }
+//         p {
+//             font-size: 18px;
+//             font-weight: 400;
+//         }
+//         .dinamic-testimonials {
+//             text-align: center;
+//             img {
+//                 width: 15%;
+//                 margin: 40px;
+//             }
+//             p {
+//                 font-size: 16px;
+//                 width: 50%;
+//                 margin: 0 auto;
+//                 line-height: 25px;
+//                 font-weight: 400;
+//             }
+//         }
+//     }
+// }
 
 </style>
