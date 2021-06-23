@@ -94,7 +94,7 @@ export default {
                     &:hover {
                         transform: scale(1.03);
                         box-shadow: 
-                            0px 10px 10px rgb(0 0 0 / 10%)
+                            0px 10px 10px rgb(0 0 0 / 10%);
                     }
                 }
                 h3 {
