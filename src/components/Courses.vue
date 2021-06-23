@@ -2,27 +2,35 @@
     <section id="courses-container">
         <svg class="fusion-big-triangle-candy" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" style="fill:#e4eaed;padding:0;"><path d="M-1 -1 L50 99 L101 -1 Z"></path></svg>
         <div class="container-dimension">
-            <!-- 1 colonna -->
+            <!-- col 1/4 -->
             <div class="column4 column4-absolute">
                 <img src="../assets/new-corner.jpg" alt="">
                 <h2>Courses</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita voluptate qui veritatis iusto magni dolorum sapiente quas. Lorem ipsum dolor sit amet.</p>
                 <button>Course Information</button>
             </div>
-            <!-- 3 colonne  -->
+            <!-- col 2/4  -->
             <div id="container-3column">
                 <div class="column4">
-                <img src="../assets/courses-passplus-200x200.jpg" alt="">
+                    <div class="container-zoom-img">
+                        <img src="../assets/courses-passplus-200x200.jpg" alt="">
+                    </div>
                 <h3>Pass Plus</h3> 
                 <button>Learn More</button>
             </div>
+            <!-- col 3/4 -->
             <div class="column4">
-                <img src="../assets/course-intensive-200x200.jpg" alt="">
+                <div class="container-zoom-img">
+                    <img src="../assets/course-intensive-200x200.jpg" alt="">
+                </div>
                 <h3>Pass Plus</h3> 
                 <button>Learn More</button>
             </div>
+            <!-- col 4/4 -->
             <div class="column4">
-                <img src="../assets/courses-instructor-200x200.jpg" alt="">
+                <div class="container-zoom-img">
+                    <img src="../assets/courses-instructor-200x200.jpg" alt="">
+                </div>
                 <h3>Pass Plus</h3> 
                 <button>Learn More</button>
             </div>
@@ -65,6 +73,19 @@ export default {
             flex-direction: column;
             color: #7799ad;
             padding: 10px;
+            .container-zoom-img {
+                display: inline-block;
+                overflow: hidden; 
+                img {
+                    height: 150px;
+                    display: block;
+                    transition: transform .6s;
+                }
+                &:hover img {
+                    transform: scale(1.3);
+                    transform-origin: 50% 50%;
+                    }
+            }
             h3 {
                 font-weight: 500;
                 margin: 5px 0;

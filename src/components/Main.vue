@@ -13,6 +13,8 @@
         
         <Slider />
 
+        <Lastnews />
+
   </main>
 </template>
 
@@ -23,6 +25,7 @@ import Graphs from './Graphs.vue'
 import Courses from './Courses.vue'
 import Drivetoday from './Drivetoday.vue'
 import Signup from './Signup.vue'
+import Lastnews from './Lastnews.vue'
 
 export default {
     name: 'Main',
@@ -32,7 +35,8 @@ export default {
         Graphs,
         Courses,
         Drivetoday,
-        Signup
+        Signup,
+        Lastnews
     },
     props: {
         istructors: Array
