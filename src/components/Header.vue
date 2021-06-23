@@ -201,6 +201,7 @@ header {
                         text-transform: uppercase;
                         text-decoration: none;
                         color: white;
+                        &:first-child,
                         &:hover,
                         &.active {
                             cursor: pointer;

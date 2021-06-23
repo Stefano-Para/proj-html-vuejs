@@ -76,13 +76,14 @@ export default {
             .container-zoom-img {
                 display: inline-block;
                 overflow: hidden; 
+                    height: 180px;
+                    width: 180px;
                 img {
-                    height: 150px;
                     display: block;
                     transition: transform .6s;
                 }
                 &:hover img {
-                    transform: scale(1.3);
+                    transform: scale(1.2);
                     transform-origin: 50% 50%;
                     }
             }
