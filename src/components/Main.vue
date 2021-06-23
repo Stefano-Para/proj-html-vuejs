@@ -51,105 +51,12 @@
         <!-- section 3/5 instructor sect  -->
         <section id="instructorsNDcourses">
 
-            <!-- absolute part top of section  -->
-            <section id="courses-container">
-                <!-- non posso metterla come background perchè mi da un errore di chrome non da console solita ma per privacy (errore giallo) -->
-                <svg class="fusion-big-triangle-candy" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" style="fill:#e4eaed;padding:0;"><path d="M-1 -1 L50 99 L101 -1 Z"></path></svg>
+            <Courses />
 
-                <div class="container-dimension">
-                    <!-- 1 colonna -->
-                    <div class="column4 column4-absolute">
-                        <img src="../assets/new-corner.jpg" alt="">
-                        <h2>Courses</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia expedita voluptate qui veritatis iusto magni dolorum sapiente quas. Lorem ipsum dolor sit amet.</p>
-                        <button>Course Information</button>
-                    </div>
-                    <!-- 3 colonne  -->
-                    <div id="container-3column">
-                        <div class="column4">
-                        <img src="../assets/courses-passplus-200x200.jpg" alt="">
-                        <h3>Pass Plus</h3> 
-                        <button>Learn More</button>
-                    </div>
-                    <div class="column4">
-                        <img src="../assets/course-intensive-200x200.jpg" alt="">
-                        <h3>Pass Plus</h3> 
-                        <button>Learn More</button>
-                    </div>
-                    <div class="column4">
-                        <img src="../assets/courses-instructor-200x200.jpg" alt="">
-                        <h3>Pass Plus</h3> 
-                        <button>Learn More</button>
-                    </div>
-                    </div>
-                </div>
+            <Graphs />
 
-            </section>
-            <!-- second part with istructors & circle graphs -->
-            <section>
-                <div class="container-dimension container-circles3">
-                    <div class="background-green">
-                        <div class="container-circle">
-                            <i class="fas fa-circle-notch fa-9x"></i>
-                            <div class="white-circle">
-                                <div class="green-circle-small"></div>
-                                <h2>95%</h2>
-                            </div>
-                                <h5>Pass Rate</h5>
-                        </div>
-                    </div>
-                    <div class="background-green">
-                        <div class="container-circle">
-                            <i class="far fa-circle fa-9x"></i>
-                            <div class="white-circle">
-                                <h2>100%</h2>
-                            </div>
-                                <h5>Pass Rate</h5>
-                        </div>
-                    </div>
-                    <div class="background-green">
-                        <div class="container-circle">
-                            <div class="grey-circle">
-                                <div class="green-circle-small"></div>
-                            </div>
-                            <div class="white-circle">
-                                <h2>95%</h2>
-                            </div>
-                                <h5>Pass Rate</h5>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- thir part "your istructors" -->
-            <section id="container-your-istructors">
-                <div class="container-dimension">
-                    <h2>Your Istructors</h2>
-                    <div id="textNDbutton">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nostrum. Doloremque sint id eius accusamus esse. Facilis obcaecati omnis..</p>
-                        <button>More about us</button>
-                    </div>
-                </div>
-                <!-- import data from app building 3 cards  -->
-                <div id="container-istructors-cards">
-                    <div class="container-dimension">
-                        <div v-for="(istructor, index) in istructors"
-                        :key="index"
-                        class="container-single-card">
-                            <img :src="require(`../assets/${istructor.img}`)" alt="">
-                            <h3>{{ istructor.name }}</h3>
-                            <ul>
-                                <li>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </li>
-                            </ul>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            <Istructors :istructors="istructors"/>
+            
             <Slider />
             
         </section>
@@ -159,11 +66,17 @@
 
 <script>
 import Slider from './Slider.vue'
+import Istructors from './Istructors.vue'
+import Graphs from './Graphs.vue'
+import Courses from './Courses.vue'
 
 export default {
     name: 'Main',
     components: {
-        Slider
+        Slider,
+        Istructors,
+        Graphs,
+        Courses
     },
     props: {
         istructors: Array
@@ -314,7 +227,6 @@ export default {
 }
 // THIRD SECTION 
 #instructorsNDcourses {
-    // height: 900px;
     #courses-container {
         position: relative;
         height: 450px;
@@ -397,194 +309,156 @@ export default {
             }
         }
     }
-    .container-circles3 {
-        display: flex;
-        height: 150px;
-        justify-content: space-between;
-        position: relative;
-        color: #7799ad;
-        text-transform: uppercase;
-        .background-green {
-            box-shadow: 
-                0px 16px 15px 5px rgb(0 0 0 / 10%),
-                0px 0px #7ABC64;
-            background-color: #7ABC64;
-            height: 360px;
-            width: 32.5%;
-            border-radius: 10px;
-            .container-circle {
-                background-color: white;
-                width: 100%;
-                height: 360px;
-                top: 7px;
-                border-radius: 10px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                i {
-                    font-size: 220px;
-                    color: #7ABC64;
-                    transform: rotate(-10deg)
-                }
-                h5 {
-                    width: 100%;
-                    text-align: center;
-                    margin: 10px auto 0;
-                    font-weight: 500;
-                }
-                .grey-circle {
-                    position: relative;
-                    z-index: 1;
-                    height: 215px;
-                    width: 215px;
-                    border-radius: 50%;
-                    background-color: #eeeeee;
-                }
-                .white-circle {
-                    position: absolute;
-                    background-color: white;
-                    z-index: 1;
-                    bottom: 97px;
-                    height: 192px;
-                    width: 192px;
-                    border-radius: 50%;
-                    h2 {
-                        font-size: 40px;
-                        position: absolute;
-                        z-index: 1;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-45%, -50%);
-                    }
-                }
-                .green-circle-small:last-child {
-                    position: relative;
-                    left: 50%;
-                    transform: translate(-50%);
-                    z-index: 1;
-                    border-radius: 50%;
-                    background-color: #7ABC64;
-                    height: 12px;
-                    width: 12px;
-                }
-            }
-        }
-    }
-    #container-your-istructors {
-        margin-top: 300px;
-        #textNDbutton {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin: 20px 0;
-            p {
-                margin-top: 10px;
-                width: 60%;
-                letter-spacing: 0.5px;
-                line-height: 25px;
-                color: #7799ad;
-            }
-            button {
-                text-transform: uppercase;
-                font-weight: bold;
-                color: white;
-                padding: 10px 70px;
-                background-color: #7ABC64;
-                border-radius: 20px;
-                border: 0;
-                &:hover {
-                    transform: scale(0.8);
-                }
-            }
-        }
-        #container-istructors-cards {
-            height: 370px;
-            .container-dimension {
-                display: flex;
-                justify-content: space-between;
-                text-align: center;
-                padding: 30px 0;
-                .container-single-card {
-                    box-shadow: 
-                        0px 16px 15px 5px rgb(0 0 0 / 10%),
-                        0px -6px #7ABC64;
-                    background-color: white;
-                    color: #bebdbd;
-                    border-radius: 10px;
-                    height: 400px;
-                    width: 34%;
-                    padding: 15px;
-                    &:first-child,
-                    &:last-child {
-                        width: 32%;
-                        height: 390px;
-                    }
-                    img {
-                        width: 250px;
-                    }
-                    h3 {
-                        color: #494c4e;
-                        margin: 20px 0 10px;
-                        font-size: 25px;
-                        font-weight: 600;
-                    }
-                    ul {
-                        list-style-type: none;
-                        a {
-                            margin: 10px;
-                            text-decoration: none;
-                            color: #bebdbd;;
-                        }
-                    }
-                    p {
-                        font-size: 14px;
-                        padding: 0px 15px;
-                        letter-spacing: 0.5px;
-                        line-height: 25px;
-                    }
-                }
-            }
-        }
-    }
+    // .container-circles3 {
+    //     display: flex;
+    //     height: 150px;
+    //     justify-content: space-between;
+    //     position: relative;
+    //     color: #7799ad;
+    //     text-transform: uppercase;
+    //     .background-green {
+    //         box-shadow: 
+    //             0px 16px 15px 5px rgb(0 0 0 / 10%),
+    //             0px 0px #7ABC64;
+    //         background-color: #7ABC64;
+    //         height: 360px;
+    //         width: 32.5%;
+    //         border-radius: 10px;
+    //         .container-circle {
+    //             background-color: white;
+    //             width: 100%;
+    //             height: 360px;
+    //             top: 7px;
+    //             border-radius: 10px;
+    //             display: flex;
+    //             flex-direction: column;
+    //             justify-content: center;
+    //             align-items: center;
+    //             position: relative;
+    //             i {
+    //                 font-size: 220px;
+    //                 color: #7ABC64;
+    //                 transform: rotate(-10deg)
+    //             }
+    //             h5 {
+    //                 width: 100%;
+    //                 text-align: center;
+    //                 margin: 10px auto 0;
+    //                 font-weight: 500;
+    //             }
+    //             .grey-circle {
+    //                 position: relative;
+    //                 z-index: 1;
+    //                 height: 215px;
+    //                 width: 215px;
+    //                 border-radius: 50%;
+    //                 background-color: #eeeeee;
+    //             }
+    //             .white-circle {
+    //                 position: absolute;
+    //                 background-color: white;
+    //                 z-index: 1;
+    //                 bottom: 97px;
+    //                 height: 192px;
+    //                 width: 192px;
+    //                 border-radius: 50%;
+    //                 h2 {
+    //                     font-size: 40px;
+    //                     position: absolute;
+    //                     z-index: 1;
+    //                     top: 50%;
+    //                     left: 50%;
+    //                     transform: translate(-45%, -50%);
+    //                 }
+    //             }
+    //             .green-circle-small:last-child {
+    //                 position: relative;
+    //                 left: 50%;
+    //                 transform: translate(-50%);
+    //                 z-index: 1;
+    //                 border-radius: 50%;
+    //                 background-color: #7ABC64;
+    //                 height: 12px;
+    //                 width: 12px;
+    //             }
+    //         }
+    //     }
+    // }
+    // #container-your-istructors {
+    //     margin-top: 300px;
+    //     #textNDbutton {
+    //         display: flex;
+    //         justify-content: space-between;
+    //         align-items: flex-end;
+    //         margin: 20px 0;
+    //         p {
+    //             margin-top: 10px;
+    //             width: 60%;
+    //             letter-spacing: 0.5px;
+    //             line-height: 25px;
+    //             color: #7799ad;
+    //         }
+    //         button {
+    //             text-transform: uppercase;
+    //             font-weight: bold;
+    //             color: white;
+    //             padding: 10px 70px;
+    //             background-color: #7ABC64;
+    //             border-radius: 20px;
+    //             border: 0;
+    //             &:hover {
+    //                 transform: scale(0.8);
+    //             }
+    //         }
+    //     }
+    //     #container-istructors-cards {
+    //         height: 370px;
+    //         .container-dimension {
+    //             display: flex;
+    //             justify-content: space-between;
+    //             text-align: center;
+    //             padding: 30px 0;
+    //             .container-single-card {
+    //                 box-shadow: 
+    //                     0px 16px 15px 5px rgb(0 0 0 / 10%),
+    //                     0px -6px #7ABC64;
+    //                 background-color: white;
+    //                 color: #bebdbd;
+    //                 border-radius: 10px;
+    //                 height: 400px;
+    //                 width: 34%;
+    //                 padding: 15px;
+    //                 &:first-child,
+    //                 &:last-child {
+    //                     width: 32%;
+    //                     height: 390px;
+    //                 }
+    //                 img {
+    //                     width: 250px;
+    //                 }
+    //                 h3 {
+    //                     color: #494c4e;
+    //                     margin: 20px 0 10px;
+    //                     font-size: 25px;
+    //                     font-weight: 600;
+    //                 }
+    //                 ul {
+    //                     list-style-type: none;
+    //                     a {
+    //                         margin: 10px;
+    //                         text-decoration: none;
+    //                         color: #bebdbd;;
+    //                     }
+    //                 }
+    //                 p {
+    //                     font-size: 14px;
+    //                     padding: 0px 15px;
+    //                     letter-spacing: 0.5px;
+    //                     line-height: 25px;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
-// #testimonials {
-//     background-image: url('../assets/testimonial-background.jpg');
-//     background-size: cover;
-//     background-position: center;
-//     height: 700px;
-//     .container-dimension {
-//         height: 100%;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         color: #95a5b2;
-//         h2 {
-//             color: #494c4e;
-//             font-weight: 600;
-//             font-size: 30px;
-//         }
-//         p {
-//             font-size: 18px;
-//             font-weight: 400;
-//         }
-//         .dinamic-testimonials {
-//             text-align: center;
-//             img {
-//                 width: 15%;
-//                 margin: 40px;
-//             }
-//             p {
-//                 font-size: 16px;
-//                 width: 50%;
-//                 margin: 0 auto;
-//                 line-height: 25px;
-//                 font-weight: 400;
-//             }
-//         }
-//     }
-// }
-
 </style>
