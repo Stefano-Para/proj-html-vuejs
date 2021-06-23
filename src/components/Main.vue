@@ -85,13 +85,14 @@
                 </div>
 
             </section>
-            <!-- second part with istructors  -->
+            <!-- second part with istructors & circle graphs -->
             <section>
                 <div class="container-dimension container-circles3">
                     <div class="background-green">
                         <div class="container-circle">
                             <i class="fas fa-circle-notch fa-9x"></i>
                             <div class="white-circle">
+                                <div class="green-circle-small"></div>
                                 <h2>95%</h2>
                             </div>
                                 <h5>Pass Rate</h5>
@@ -109,7 +110,7 @@
                     <div class="background-green">
                         <div class="container-circle">
                             <div class="grey-circle">
-                                
+                                <div class="green-circle-small"></div>
                             </div>
                             <div class="white-circle">
                                 <h2>95%</h2>
@@ -126,6 +127,20 @@
                     <div id="textNDbutton">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nostrum. Doloremque sint id eius accusamus esse. Facilis obcaecati omnis..</p>
                         <button>More about us</button>
+                    </div>
+                </div>
+                <!-- import data from app building 3 cards  -->
+                <div id="container-istructors-cards">
+                    <div class="container-dimension">
+                        <div class="container-single-card">
+                            1
+                        </div>
+                        <div class="container-single-card">
+                            2
+                        </div>
+                        <div class="container-single-card">
+                            3
+                        </div>
                     </div>
                 </div>
             </section>
@@ -374,7 +389,9 @@ export default {
         color: #7799ad;
         text-transform: uppercase;
         .background-green {
-            box-shadow: 0px 16px 15px 5px rgb(0 0 0 / 10%);
+            box-shadow: 
+                0px 16px 15px 5px rgb(0 0 0 / 10%),
+                0px 0px #7ABC64;
             background-color: #7ABC64;
             height: 360px;
             width: 32.5%;
@@ -426,11 +443,21 @@ export default {
                         transform: translate(-45%, -50%);
                     }
                 }
+                .green-circle-small:last-child {
+                    position: relative;
+                    left: 50%;
+                    transform: translate(-50%);
+                    z-index: 1;
+                    border-radius: 50%;
+                    background-color: #7ABC64;
+                    height: 12px;
+                    width: 12px;
+                }
             }
         }
     }
     #container-your-istructors {
-        margin: 300px 0;
+        margin-top: 300px;
         #textNDbutton {
             display: flex;
             justify-content: space-between;
@@ -440,7 +467,7 @@ export default {
                 margin-top: 10px;
                 width: 60%;
                 letter-spacing: 0.5px;
-                // line-height: 25px;
+                line-height: 25px;
                 color: #7799ad;
             }
             button {
@@ -453,6 +480,30 @@ export default {
                 border: 0;
                 &:hover {
                     transform: scale(0.8);
+                }
+            }
+        }
+        #container-istructors-cards {
+            // cancellare altezza 
+            height: 500px;
+            .container-dimension {
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                padding: 30px 0;
+                .container-single-card {
+                    box-shadow: 
+                        0px 16px 15px 5px rgb(0 0 0 / 10%),
+                        0px -6px #7ABC64;
+                    background-color: white;
+                    border-radius: 10px;
+                    height: 400px;
+                    width: 35%;
+                    &:first-child,
+                    &:last-child {
+                        width: 32%;
+                        height: 390px;
+                    }
                 }
             }
         }
